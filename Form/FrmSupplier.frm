@@ -2,6 +2,7 @@ VERSION 5.00
 Object = "{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}#13.4#0"; "CODEJO~3.OCX"
 Object = "{DEF7CADD-83C0-11D0-A0F1-00A024703500}#7.0#0"; "todg7.ocx"
 Object = "{A7960112-5DC4-4575-BFA3-DAD80FEE0438}#33.0#0"; "BasKomponen.ocx"
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "MSMASK32.OCX"
 Begin VB.Form FrmSupplier 
    BorderStyle     =   0  'None
    Caption         =   "Form1"
@@ -13,169 +14,28 @@ Begin VB.Form FrmSupplier
    ScaleHeight     =   6300
    ScaleWidth      =   7755
    ShowInTaskbar   =   0   'False
-   StartUpPosition =   3  'Windows Default
+   StartUpPosition =   2  'CenterScreen
    Begin BasKomponen.BasForm BasForm1 
-      Height          =   4200
+      Height          =   4920
       Left            =   0
-      TabIndex        =   0
+      TabIndex        =   13
       Top             =   0
       Width           =   7035
       _ExtentX        =   12409
-      _ExtentY        =   7408
+      _ExtentY        =   8678
       ButtonMax       =   0   'False
       ButtonMin       =   0   'False
       Caption         =   ":: Supllier ::"
       Object.ToolTipText     =   ":: Supllier ::"
-      Begin VB.TextBox Text1 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   690
-         Left            =   2160
-         MultiLine       =   -1  'True
-         TabIndex        =   11
-         Top             =   1080
-         Width           =   2595
-      End
-      Begin VB.PictureBox Picture1 
-         BackColor       =   &H00808080&
-         Height          =   855
-         Left            =   240
-         ScaleHeight     =   795
-         ScaleWidth      =   6435
-         TabIndex        =   3
-         Top             =   3120
-         Width           =   6495
-         Begin XtremeSuiteControls.PushButton CmdAdd 
-            Height          =   615
-            Left            =   120
-            TabIndex        =   4
-            ToolTipText     =   "Tambah data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmSupplier.frx":0000
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdEdit 
-            Height          =   615
-            Left            =   720
-            TabIndex        =   5
-            ToolTipText     =   "Edit data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmSupplier.frx":59AA
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdDelete 
-            Height          =   615
-            Left            =   1320
-            TabIndex        =   6
-            ToolTipText     =   "Hapus data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmSupplier.frx":B354
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdSave 
-            Height          =   615
-            Left            =   4560
-            TabIndex        =   7
-            ToolTipText     =   "Simpan data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmSupplier.frx":10CFE
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdCancel 
-            Height          =   615
-            Left            =   5160
-            TabIndex        =   8
-            ToolTipText     =   "Cancel"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmSupplier.frx":166A8
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdQuit 
-            Height          =   615
-            Left            =   5760
-            TabIndex        =   9
-            ToolTipText     =   "Exit"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmSupplier.frx":1C052
-            BorderGap       =   0
-         End
-      End
-      Begin VB.TextBox TxtNama 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   330
-         Left            =   2160
-         TabIndex        =   2
-         Top             =   720
-         Width           =   2595
-      End
       Begin TrueOleDBGrid70.TDBGrid Grid 
-         Height          =   2415
+         Height          =   3015
          Left            =   6480
-         TabIndex        =   1
+         TabIndex        =   12
          ToolTipText     =   "Double klik untuk edit data"
          Top             =   480
          Width           =   6585
          _ExtentX        =   11615
-         _ExtentY        =   4260
+         _ExtentY        =   5318
          _LayoutType     =   0
          _RowHeight      =   -2147483647
          _WasPersistedAsPixels=   0
@@ -317,6 +177,299 @@ Begin VB.Form FrmSupplier
          _StyleDefs(73)  =   "Named:id=42:FilterBar"
          _StyleDefs(74)  =   ":id=42,.parent=33,.bgcolor=&HFF0000&"
       End
+      Begin VB.TextBox TxtCP 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   5
+         Top             =   2880
+         Width           =   2595
+      End
+      Begin VB.TextBox TxtKota 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   2
+         Top             =   1800
+         Width           =   2595
+      End
+      Begin MSMask.MaskEdBox TxtFax 
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   4
+         Top             =   2520
+         Width           =   1935
+         _ExtentX        =   3413
+         _ExtentY        =   582
+         _Version        =   393216
+         Appearance      =   0
+         BackColor       =   16777215
+         MaxLength       =   16
+         Mask            =   "[9999]-999999999"
+         PromptChar      =   "_"
+      End
+      Begin MSMask.MaskEdBox TxtTlp 
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   3
+         Top             =   2160
+         Width           =   1935
+         _ExtentX        =   3413
+         _ExtentY        =   582
+         _Version        =   393216
+         Appearance      =   0
+         BackColor       =   16777215
+         MaxLength       =   16
+         Mask            =   "[9999]-999999999"
+         PromptChar      =   "_"
+      End
+      Begin VB.TextBox TxtAlamat 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   690
+         Left            =   2160
+         MultiLine       =   -1  'True
+         TabIndex        =   1
+         Top             =   1080
+         Width           =   2595
+      End
+      Begin VB.PictureBox Picture1 
+         BackColor       =   &H00808080&
+         Height          =   855
+         Left            =   240
+         ScaleHeight     =   795
+         ScaleWidth      =   6435
+         TabIndex        =   14
+         Top             =   3720
+         Width           =   6495
+         Begin XtremeSuiteControls.PushButton CmdAdd 
+            Height          =   615
+            Left            =   120
+            TabIndex        =   6
+            ToolTipText     =   "Tambah data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmSupplier.frx":0000
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdEdit 
+            Height          =   615
+            Left            =   720
+            TabIndex        =   7
+            ToolTipText     =   "Edit data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmSupplier.frx":59AA
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdDelete 
+            Height          =   615
+            Left            =   1320
+            TabIndex        =   8
+            ToolTipText     =   "Hapus data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmSupplier.frx":B354
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdSave 
+            Height          =   615
+            Left            =   4560
+            TabIndex        =   9
+            ToolTipText     =   "Simpan data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmSupplier.frx":10CFE
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdCancel 
+            Height          =   615
+            Left            =   5160
+            TabIndex        =   10
+            ToolTipText     =   "Cancel"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmSupplier.frx":166A8
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdQuit 
+            Height          =   615
+            Left            =   5760
+            TabIndex        =   11
+            ToolTipText     =   "Exit"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmSupplier.frx":1C052
+            BorderGap       =   0
+         End
+      End
+      Begin VB.TextBox TxtNama 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   0
+         Top             =   720
+         Width           =   2595
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Kontak Person"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   5
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   20
+         Top             =   2880
+         Width           =   1215
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Fax"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   4
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   19
+         Top             =   2520
+         Width           =   270
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Telepon"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   3
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   18
+         Top             =   2160
+         Width           =   675
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Kota"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   2
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   17
+         Top             =   1800
+         Width           =   360
+      End
       Begin VB.Label LB_Reload 
          AutoSize        =   -1  'True
          BackStyle       =   0  'Transparent
@@ -335,7 +488,7 @@ Begin VB.Form FrmSupplier
          Index           =   0
          Left            =   480
          MousePointer    =   99  'Custom
-         TabIndex        =   12
+         TabIndex        =   16
          Top             =   1080
          Width           =   570
       End
@@ -357,7 +510,7 @@ Begin VB.Form FrmSupplier
          Index           =   1
          Left            =   480
          MousePointer    =   99  'Custom
-         TabIndex        =   10
+         TabIndex        =   15
          Top             =   720
          Width           =   1185
       End
@@ -365,7 +518,7 @@ Begin VB.Form FrmSupplier
          BackColor       =   &H004C4C4C&
          BackStyle       =   1  'Opaque
          BorderColor     =   &H00808080&
-         Height          =   2130
+         Height          =   2730
          Index           =   0
          Left            =   360
          Top             =   600

@@ -24,6 +24,7 @@ Designer=Report\BarcodeRpt.Dsr
 Form=Form\FrmBarcode.frm
 Module=mShellExecute; Module\mShellExecute.bas
 Form=Form\FrmSupplier.frm
+Object={C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0; MSMASK32.OCX
 IconForm="FrmUtama"
 Startup="FrmUtama"
 HelpFile=""

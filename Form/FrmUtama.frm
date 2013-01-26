@@ -120,3 +120,7 @@ End Sub
 Private Sub MProduk_Click()
 FrmProduk.Show 1
 End Sub
+
+Private Sub MSupplier_Click()
+FrmSupplier.Show 1
+End Sub

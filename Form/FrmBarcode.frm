@@ -94,7 +94,7 @@ Unload Me
 End Sub
 
 Private Sub CmdSetting_Click()
-  Report.PrinterSetup Me.hWnd
+  Report.PrinterSetup Me.hwnd
   CRViewer1.Refresh
 End Sub
 
@@ -106,7 +106,7 @@ Set Report = New BarcodeRpt
 'Report.Database.SetDataSource oRS
 
 Report.TxtKode.SetText Trim(FrmBarang.TxtKode.Text)
-Report.Txt1.SetText Report.TxtKode.Text
+
 
 CRViewer1.ReportSource = Report
 Screen.MousePointer = vbHourglass
