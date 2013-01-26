@@ -1,0 +1,25 @@
+ 'POPULATE THE COMBO
+ 
+SQL = "select * from jenis"
+Set RsFind = DbCon.Execute(SQL)
+
+Dim MyArray() As String
+Dim I As Single
+
+RsFind.MoveFirst
+ReDim MyArray(RsFind.RecordCount, 2)
+For I = 1 To RsFind.RecordCount
+
+     'loads the values of the recordset to the array, you'll need to add two more
+    MyArray(I, 0) = RsFind!kodejenis
+    MyArray(I, 1) = RsFind!namajenis
+    RsFind.MoveNext
+Next I
+ 
+With Me.ComboBox1
+    .ColumnCount = 2
+    .BoundColumn = 1
+    .ColumnWidths = "0.5 in; 0.5 in"
+    .List = MyArray
+    
+End With
