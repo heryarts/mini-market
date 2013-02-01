@@ -2,6 +2,7 @@ Attribute VB_Name = "ModulUtama"
 Public DbCon As New ADODB.Connection
 Public RsFind As New ADODB.Recordset
 Public SQL, ConDb, Periode As String
+Public Trans         As New Convert
 
 
 '---------------------------------------------------------------------------------------
@@ -35,5 +36,17 @@ Function FormatTgl(ddate As Date) As String
     FormatTgl = Format(ddate, "mm/dd/yyyy")
 End Function
 
-
-
+Public Sub Enter(ByVal Key As Integer, Optional ByRef XX As Object)
+     If Key = 13 Then SendKeys "{tab}"
+     If Key = 38 Then
+         If XX Is Nothing Then
+            SendKeys "+{tab}"
+            Exit Sub
+         End If
+     ElseIf Key = 40 Then
+         If XX Is Nothing Then
+            SendKeys "{tab}"
+            Exit Sub
+         End If
+     End If
+End Sub

@@ -77,7 +77,7 @@ Begin VB.Form FrmBarang
       Object.ToolTipText     =   ":: Barang ::"
       Begin TrueOleDBGrid70.TDBGrid Grid 
          Height          =   3615
-         Left            =   240
+         Left            =   8760
          TabIndex        =   26
          Top             =   480
          Width           =   8760
@@ -1077,6 +1077,14 @@ With CmbGrup
 End With
 End Sub
 
+Private Sub CmbGrup_GotFocus()
+SendKeys "{F4}"
+End Sub
+
+Private Sub CmbGrup_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
+End Sub
+
 Private Sub CmbProduk_Click()
 TxtKode = KodeAuto
 End Sub
@@ -1096,6 +1104,22 @@ With CmbProduk
         .Columns(1).Width = 3000
         .Columns(0).Visible = False
 End With
+End Sub
+
+Private Sub CmbProduk_GotFocus()
+SendKeys "{F4}"
+End Sub
+
+Private Sub CmbProduk_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
+End Sub
+
+Private Sub CmbSatuan_GotFocus()
+SendKeys "{F4}"
+End Sub
+
+Private Sub CmbSatuan_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
 End Sub
 
 Private Sub CmdAdd_Click()
@@ -1334,4 +1358,20 @@ End Function
 
 Private Sub PushButton1_Click()
 FrmBarcode.Show 1
+End Sub
+
+Private Sub TxtBeli_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
+End Sub
+
+Private Sub TxtJual_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
+End Sub
+
+Private Sub TxtNama_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
+End Sub
+
+Private Sub TxtStock_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
 End Sub

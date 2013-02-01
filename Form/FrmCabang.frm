@@ -1,88 +1,58 @@
 VERSION 5.00
-Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Object = "{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}#13.4#0"; "CODEJO~3.OCX"
-Object = "{4A4AA691-3E6F-11D2-822F-00104B9E07A1}#3.0#0"; "ssdw3bo.ocx"
 Object = "{DEF7CADD-83C0-11D0-A0F1-00A024703500}#7.0#0"; "todg7.ocx"
 Object = "{A7960112-5DC4-4575-BFA3-DAD80FEE0438}#33.0#0"; "BasKomponen.ocx"
-Begin VB.Form FrmProduk 
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
+Begin VB.Form FrmCabang 
    BorderStyle     =   0  'None
    Caption         =   "Form1"
-   ClientHeight    =   4920
+   ClientHeight    =   4785
    ClientLeft      =   0
    ClientTop       =   0
-   ClientWidth     =   7695
+   ClientWidth     =   8535
    LinkTopic       =   "Form1"
-   ScaleHeight     =   4920
-   ScaleWidth      =   7695
+   ScaleHeight     =   4785
+   ScaleWidth      =   8535
    ShowInTaskbar   =   0   'False
    StartUpPosition =   2  'CenterScreen
-   Begin MSAdodcLib.Adodc AdoGrup 
-      Height          =   330
-      Left            =   2640
-      Top             =   4440
-      Width           =   1200
-      _ExtentX        =   2117
-      _ExtentY        =   582
-      ConnectMode     =   0
-      CursorLocation  =   3
-      IsolationLevel  =   -1
-      ConnectionTimeout=   15
-      CommandTimeout  =   30
-      CursorType      =   3
-      LockType        =   3
-      CommandType     =   8
-      CursorOptions   =   0
-      CacheSize       =   50
-      MaxRecords      =   0
-      BOFAction       =   0
-      EOFAction       =   0
-      ConnectStringType=   1
-      Appearance      =   1
-      BackColor       =   -2147483643
-      ForeColor       =   -2147483640
-      Orientation     =   0
-      Enabled         =   -1
-      Connect         =   ""
-      OLEDBString     =   ""
-      OLEDBFile       =   ""
-      DataSourceName  =   ""
-      OtherAttributes =   ""
-      UserName        =   ""
-      Password        =   ""
-      RecordSource    =   ""
-      Caption         =   "Adodc1"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+   Begin VB.TextBox TxtKode 
+      Appearance      =   0  'Flat
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      _Version        =   393216
+      Height          =   330
+      Left            =   6000
+      TabIndex        =   0
+      Top             =   4080
+      Width           =   915
    End
    Begin BasKomponen.BasForm BasForm1 
-      Height          =   4200
+      Height          =   3960
       Left            =   0
-      TabIndex        =   9
+      TabIndex        =   11
       Top             =   0
-      Width           =   7035
-      _ExtentX        =   12409
-      _ExtentY        =   7408
+      Width           =   7755
+      _ExtentX        =   13679
+      _ExtentY        =   6985
       ButtonMax       =   0   'False
       ButtonMin       =   0   'False
-      Caption         =   ":: Produk Barang ::"
-      Object.ToolTipText     =   ":: Produk Barang ::"
+      Caption         =   ":: Cabang ::"
+      Object.ToolTipText     =   ":: Cabang ::"
       Begin TrueOleDBGrid70.TDBGrid Grid 
-         Height          =   2415
-         Left            =   6000
-         TabIndex        =   10
+         Height          =   2295
+         Left            =   240
+         TabIndex        =   12
          ToolTipText     =   "Double klik untuk edit data"
-         Top             =   600
-         Width           =   6585
-         _ExtentX        =   11615
-         _ExtentY        =   4260
+         Top             =   480
+         Width           =   7305
+         _ExtentX        =   12885
+         _ExtentY        =   4048
          _LayoutType     =   0
          _RowHeight      =   -2147483647
          _WasPersistedAsPixels=   0
@@ -224,172 +194,6 @@ Begin VB.Form FrmProduk
          _StyleDefs(73)  =   "Named:id=42:FilterBar"
          _StyleDefs(74)  =   ":id=42,.parent=33,.bgcolor=&HFF0000&"
       End
-      Begin SSDataWidgets_B_OLEDB.SSOleDBCombo CmbGrup 
-         Height          =   345
-         Left            =   2160
-         TabIndex        =   1
-         Tag             =   "Kode"
-         Top             =   840
-         Width           =   2175
-         BevelType       =   0
-         _Version        =   196616
-         BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         BevelColorHighlight=   -2147483634
-         BevelColorFace  =   -2147483627
-         CheckBox3D      =   0   'False
-         ForeColorEven   =   0
-         BackColorEven   =   8454143
-         BackColorOdd    =   65535
-         RowHeight       =   423
-         Columns(0).Width=   3200
-         Columns(0).DataType=   8
-         Columns(0).FieldLen=   4096
-         _ExtentX        =   3836
-         _ExtentY        =   609
-         _StockProps     =   93
-         BackColor       =   16777215
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Verdana"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-      End
-      Begin VB.PictureBox Picture1 
-         BackColor       =   &H00808080&
-         Height          =   855
-         Left            =   240
-         ScaleHeight     =   795
-         ScaleWidth      =   6435
-         TabIndex        =   11
-         Top             =   3120
-         Width           =   6495
-         Begin XtremeSuiteControls.PushButton CmdAdd 
-            Height          =   615
-            Left            =   120
-            TabIndex        =   3
-            ToolTipText     =   "Tambah data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmProduk.frx":0000
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdEdit 
-            Height          =   615
-            Left            =   720
-            TabIndex        =   4
-            ToolTipText     =   "Edit data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmProduk.frx":59AA
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdDelete 
-            Height          =   615
-            Left            =   1320
-            TabIndex        =   5
-            ToolTipText     =   "Hapus data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmProduk.frx":B354
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdSave 
-            Height          =   615
-            Left            =   4560
-            TabIndex        =   6
-            ToolTipText     =   "Simpan data"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmProduk.frx":10CFE
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdCancel 
-            Height          =   615
-            Left            =   5160
-            TabIndex        =   7
-            ToolTipText     =   "Cancel"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmProduk.frx":166A8
-            BorderGap       =   0
-         End
-         Begin XtremeSuiteControls.PushButton CmdQuit 
-            Height          =   615
-            Left            =   5760
-            TabIndex        =   8
-            ToolTipText     =   "Exit"
-            Top             =   80
-            Width           =   615
-            _Version        =   851972
-            _ExtentX        =   1085
-            _ExtentY        =   1085
-            _StockProps     =   79
-            BackColor       =   8454143
-            Appearance      =   6
-            Picture         =   "FrmProduk.frx":1C052
-            BorderGap       =   0
-         End
-      End
-      Begin VB.TextBox TxtKode 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   9
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   330
-         Left            =   2160
-         Locked          =   -1  'True
-         TabIndex        =   0
-         Top             =   1200
-         Width           =   1395
-      End
       Begin VB.TextBox TxtNama 
          Appearance      =   0  'Flat
          BeginProperty Font 
@@ -403,58 +207,170 @@ Begin VB.Form FrmProduk
          EndProperty
          Height          =   330
          Left            =   2160
+         TabIndex        =   1
+         Top             =   720
+         Width           =   2595
+      End
+      Begin VB.PictureBox Picture1 
+         BackColor       =   &H00808080&
+         Height          =   855
+         Left            =   240
+         ScaleHeight     =   795
+         ScaleWidth      =   7155
+         TabIndex        =   13
+         Top             =   2880
+         Width           =   7215
+         Begin XtremeSuiteControls.PushButton CmdAdd 
+            Height          =   615
+            Left            =   120
+            TabIndex        =   5
+            ToolTipText     =   "Tambah data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmCabang.frx":0000
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdEdit 
+            Height          =   615
+            Left            =   720
+            TabIndex        =   6
+            ToolTipText     =   "Edit data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmCabang.frx":59AA
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdDelete 
+            Height          =   615
+            Left            =   1320
+            TabIndex        =   7
+            ToolTipText     =   "Hapus data"
+            Top             =   80
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmCabang.frx":B354
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdSave 
+            Height          =   615
+            Left            =   5280
+            TabIndex        =   8
+            ToolTipText     =   "Simpan data"
+            Top             =   75
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmCabang.frx":10CFE
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdCancel 
+            Height          =   615
+            Left            =   5880
+            TabIndex        =   9
+            ToolTipText     =   "Cancel"
+            Top             =   75
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmCabang.frx":166A8
+            BorderGap       =   0
+         End
+         Begin XtremeSuiteControls.PushButton CmdQuit 
+            Height          =   615
+            Left            =   6480
+            TabIndex        =   10
+            ToolTipText     =   "Exit"
+            Top             =   75
+            Width           =   615
+            _Version        =   851972
+            _ExtentX        =   1085
+            _ExtentY        =   1085
+            _StockProps     =   79
+            BackColor       =   8454143
+            Appearance      =   6
+            Picture         =   "FrmCabang.frx":1C052
+            BorderGap       =   0
+         End
+      End
+      Begin VB.TextBox TxtAlamat 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   690
+         Left            =   2160
+         MultiLine       =   -1  'True
          TabIndex        =   2
-         Top             =   1560
+         Top             =   1080
+         Width           =   2595
+      End
+      Begin MSMask.MaskEdBox TxtTlp 
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   4
+         Top             =   2160
+         Width           =   1935
+         _ExtentX        =   3413
+         _ExtentY        =   582
+         _Version        =   393216
+         Appearance      =   0
+         BackColor       =   16777215
+         MaxLength       =   15
+         Mask            =   "[&&&&]-&&&&&&&&"
+         PromptChar      =   "_"
+      End
+      Begin VB.TextBox TxtKota 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   330
+         Left            =   2160
+         TabIndex        =   3
+         Top             =   1800
          Width           =   2595
       End
       Begin VB.Label LB_Reload 
          AutoSize        =   -1  'True
          BackStyle       =   0  'Transparent
-         Caption         =   "Grup"
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H0000CCFF&
-         Height          =   210
-         Index           =   0
-         Left            =   480
-         MousePointer    =   99  'Custom
-         TabIndex        =   14
-         Top             =   840
-         Width           =   405
-      End
-      Begin VB.Label LB_Reload 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Kode Peroduk"
-         BeginProperty Font 
-            Name            =   "Arial"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H0000CCFF&
-         Height          =   210
-         Index           =   2
-         Left            =   480
-         MousePointer    =   99  'Custom
-         TabIndex        =   13
-         Top             =   1200
-         Width           =   1170
-      End
-      Begin VB.Label LB_Reload 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Nama Produk"
+         Caption         =   "Nama Cabang"
          BeginProperty Font 
             Name            =   "Arial"
             Size            =   8.25
@@ -469,102 +385,133 @@ Begin VB.Form FrmProduk
          Index           =   1
          Left            =   480
          MousePointer    =   99  'Custom
-         TabIndex        =   12
-         Top             =   1560
-         Width           =   1095
+         TabIndex        =   17
+         Top             =   720
+         Width           =   1110
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Alamat"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   0
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   16
+         Top             =   1080
+         Width           =   570
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Kota"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   2
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   15
+         Top             =   1800
+         Width           =   360
+      End
+      Begin VB.Label LB_Reload 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Telepon"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000CCFF&
+         Height          =   210
+         Index           =   3
+         Left            =   480
+         MousePointer    =   99  'Custom
+         TabIndex        =   14
+         Top             =   2160
+         Width           =   675
       End
       Begin VB.Shape Shape4 
          BackColor       =   &H004C4C4C&
          BackStyle       =   1  'Opaque
          BorderColor     =   &H00808080&
-         Height          =   2130
+         Height          =   2010
          Index           =   0
          Left            =   360
          Top             =   600
-         Width           =   6225
+         Width           =   7065
       End
    End
 End
-Attribute VB_Name = "FrmProduk"
+Attribute VB_Name = "FrmCabang"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Dim Edit As Boolean
 
-Private Sub CmbGrup_Click()
-TxtKode = KodeAuto
-End Sub
-
-Function KodeAuto()
-SQL = "Select kodeProduk from produk where kodeGrup='" & Trim(CmbGrup.Columns(0).Text) & _
-    "' order by kodeProduk Desc"
-Set RsFind = DbCon.Execute(SQL)
-If RsFind.BOF Then
-   KodeAuto = Trim(CmbGrup.Columns(0).Text) + "0001"
-Else
-   KodeAuto = Trim(CmbGrup.Columns(0).Text) + Format(CInt(Right(RsFind!kodeProduk, 4)) + 1, "0000")
-End If
-End Function
-
-Private Sub CmbGrup_DropDown()
-AdoGrup.RecordSource = ""
-SQL = "SELECT kodeJenis as [Kode Jenis], namaJenis as [Nama Jenis] FROM jenis order by namaJenis"
-Set RsFind = DbCon.Execute(SQL)
-CmbGrup.Reset
-If RsFind.BOF Then Exit Sub
-AdoGrup.RecordSource = SQL
-With CmbGrup
-        .DataSourceList = AdoGrup
-        .DataFieldList = "nama jenis"
-        .Columns(0).Visible = False
-        .Columns(1).Width = 2500
-End With
-End Sub
-
-Private Sub CmbGrup_GotFocus()
-SendKeys "{F4}"
-End Sub
-
-Private Sub CmbGrup_KeyDown(KeyCode As Integer, Shift As Integer)
-Enter KeyCode
-End Sub
-
 Private Sub CmdAdd_Click()
 tombol False
 Edit = False
-CmbGrup.SetFocus
+TxtNama.SetFocus
 End Sub
 
 Sub RefreshData()
 Set Grid.DataSource = Nothing
-SQL = "Select kodeGrup as [Kode Grup], kodeProduk as[Kode Produk], NamaProduk as [Nama Produk] " & _
-    " from produk order by KodeProduk"
+SQL = "SELECT KodeCabang AS [Kode Cabang], NamaCabang AS [Nama Cabang], Alamat, " & _
+    " Kota, NoTlp AS Telepon FROM Cabang order by KodeCabang"
 Set Grid.DataSource = DbCon.Execute(SQL)
 Grid.Refresh
 
-Grid.Columns(0).Alignment = dbgLeft
-Grid.Columns(0).Width = 1000
+Grid.Columns(0).Visible = False
+
 Grid.Columns(1).Alignment = dbgLeft
-Grid.Columns(1).Width = 2000
+Grid.Columns(1).Width = 3000
 Grid.Columns(2).Alignment = dbgLeft
 Grid.Columns(2).Width = 3000
+Grid.Columns(3).Alignment = dbgLeft
+Grid.Columns(3).Width = 2000
+Grid.Columns(4).Alignment = dbgLeft
+Grid.Columns(4).Width = 2000
 End Sub
 
 Private Sub CmdCancel_Click()
 tombol True
 RefreshData
 bersih
-
-CmbGrup.Enabled = True
+TxtKode.Locked = False
 End Sub
 
 Private Sub CmdDelete_Click()
 If MsgBox("Yakin akan menghapus data ini?" & vbCrLf & "" _
-            & "KODE : " & Trim(Grid.Columns(1).Text) + vbCrLf & "" _
-            & "NAMA : " & Trim(Grid.Columns(2).Text) + vbCrLf & "", _
+            & "KODE CABANG : " & Trim(Grid.Columns(0).Text) + vbCrLf & "" _
+            & "NAMA CABANG : " & Trim(Grid.Columns(1).Text) + vbCrLf & "", _
          vbYesNo + vbQuestion) = vbYes Then
-    SQL = "delete from produk where kodeProduk ='" & Trim(Grid.Columns(1).Text) & "'"
+    SQL = "delete from cabang where kodeCabang ='" & Trim(Grid.Columns(0).Text) & "'"
     DbCon.Execute SQL
     MsgBox "Data terhapus"
     RefreshData
@@ -580,23 +527,29 @@ Unload Me
 End Sub
 
 Private Sub CmdSave_Click()
-If Trim(CmbGrup.Text) = "" Or Not CmbGrup.IsItemInList Then
-    MsgBox "Grup belum dipilih."
-    CmbGrup.SetFocus
-    Exit Sub
-ElseIf Trim(TxtNama) = "" Then
-    MsgBox "Nama  masih kosong."
+If Trim(TxtNama) = "" Then
+    MsgBox "Nama Grup masih kosong."
     TxtNama.SetFocus
+    Exit Sub
+ElseIf Trim(TxtAlamat) = "" Then
+    MsgBox "Alamat Supplier masih kosong."
+    TxtAlamat.SetFocus
+    Exit Sub
+ElseIf Trim(TxtKota) = "" Then
+    MsgBox "Kota Supplier masih kosong."
+    TxtKota.SetFocus
     Exit Sub
 End If
 
 If Not Edit Then
-    SQL = "insert into produk (kodegrup,kodeProduk,namaProduk) values ('" & Trim(CmbGrup.Columns(0).Text) & _
-    "','" & Trim(TxtKode) & "','" & Trim(TxtNama) & "')"
+    SQL = "insert into cabang (kodeCabang,NamaCabang,alamat,kota,notlp) " & _
+        " values ('" & Trim(KodeAuto) & "','" & Trim(TxtNama) & "','" & Trim(TxtAlamat) & _
+        "','" & Trim(TxtKota) & "','" & Trim(TxtTlp) & "')"
 Else
-    SQL = "update produk set NamaProduk ='" & Trim(TxtNama) & "' where kodeProduk ='" & _
-        Trim(TxtKode) & "'"
-    CmbGrup.Enabled = True
+    SQL = "update supplier set namaSupplier ='" & Trim(TxtNama) & "',alamat='" & Trim(TxtAlamat) & _
+        "',kota='" & Trim(TxtKota) & "', noTlp='" & Trim(TxtTlp) & _
+        "' where kodeSupplier ='" & Trim(TxtKode) & "'"
+    TxtKode.Locked = False
 End If
 DbCon.Execute SQL
 MsgBox "Data tersimpan."
@@ -610,13 +563,21 @@ Me.Height = BasForm1.Height
 Me.Width = BasForm1.Width
 Grid.Left = 240
 
-AdoGrup.ConnectionString = ConDb
-CmbGrup.ZOrder vbSendToBack
 tombol True
 Edit = False
 RefreshData
 bersih
 End Sub
+
+Function KodeAuto()
+SQL = "Select kodeCabang from Cabang order by kodeCabang Desc"
+Set RsFind = DbCon.Execute(SQL)
+If RsFind.BOF Then
+   KodeAuto = "CAB-00001"
+Else
+   KodeAuto = "CAB-" & Format(CInt(Right(RsFind!kodeCabang, 5)) + 1, "00000")
+End If
+End Function
 
 Sub tombol(Status As Boolean)
 CmdAdd.Visible = Status
@@ -630,26 +591,26 @@ Grid.Visible = Status
 End Sub
 
 Private Sub Grid_DblClick()
-SQL = "select namajenis from jenis where kodejenis ='" & Trim(Grid.Columns(0).Text) & "'"
-Set RsFind = DbCon.Execute(SQL)
-If RsFind.BOF Then Exit Sub
+TxtKode = Trim(Grid.Columns(0).Text)
+TxtNama = Trim(Grid.Columns(1).Text)
+TxtAlamat = Trim(Grid.Columns(2).Text)
+TxtKota = Trim(Grid.Columns(3).Text)
+TxtTlp = Trim(Grid.Columns(4).Text)
 
-CmbGrup.Text = RsFind!namajenis
-TxtKode = Trim(Grid.Columns(1).Text)
-TxtNama = Trim(Grid.Columns(2).Text)
-
-CmbGrup.Enabled = False
+TxtKode.Locked = True
 Edit = True
 tombol False
 End Sub
 
 Sub bersih()
-CmbGrup.Text = ""
 TxtKode = ""
 TxtNama = ""
+TxtAlamat = ""
+TxtKota = ""
+TxtTlp.Text = "[____]-________"
 End Sub
 
-Private Sub TxtKode_KeyDown(KeyCode As Integer, Shift As Integer)
+Private Sub TxtAlamat_KeyDown(KeyCode As Integer, Shift As Integer)
 Enter KeyCode
 End Sub
 
@@ -659,6 +620,10 @@ If KeyAscii = vbKeyReturn Then
     SendKeys "{tab}"
     KeyAscii = 0
 End If
+End Sub
+
+Private Sub TxtKota_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
 End Sub
 
 Private Sub TxtNama_KeyDown(KeyCode As Integer, Shift As Integer)
@@ -671,6 +636,11 @@ If KeyAscii = vbKeyReturn Then
     SendKeys "{tab}"
     KeyAscii = 0
 End If
+End Sub
+
+
+Private Sub TxtTlp_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
 End Sub
 
 

@@ -506,12 +506,20 @@ TxtKode = ""
 TxtNama = ""
 End Sub
 
+Private Sub TxtKode_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
+End Sub
+
 Private Sub TxtKode_KeyPress(KeyAscii As Integer)
 KeyAscii = Asc(UCase((Chr(KeyAscii))))
 If KeyAscii = vbKeyReturn Then
     SendKeys "{tab}"
     KeyAscii = 0
 End If
+End Sub
+
+Private Sub TxtNama_KeyDown(KeyCode As Integer, Shift As Integer)
+Enter KeyCode
 End Sub
 
 Private Sub TxtNama_KeyPress(KeyAscii As Integer)

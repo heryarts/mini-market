@@ -78,6 +78,15 @@ Begin VB.Form FrmUtama
    Begin VB.Menu MLaporan 
       Caption         =   "&Laporan"
    End
+   Begin VB.Menu MSetting 
+      Caption         =   "&Setting"
+      Begin VB.Menu MUser 
+         Caption         =   "User"
+      End
+      Begin VB.Menu MCabang 
+         Caption         =   "Cabang"
+      End
+   End
    Begin VB.Menu MExit 
       Caption         =   "&Exit"
    End
@@ -109,6 +118,10 @@ Private Sub MBarang_Click()
 FrmBarang.Show 1
 End Sub
 
+Private Sub MCabang_Click()
+FrmCabang.Show 1
+End Sub
+
 Private Sub MExit_Click()
 Unload Me
 End Sub
@@ -123,4 +136,8 @@ End Sub
 
 Private Sub MSupplier_Click()
 FrmSupplier.Show 1
+End Sub
+
+Private Sub MUser_Click()
+FrmUser.Show 1
 End Sub
